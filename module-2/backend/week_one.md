@@ -39,6 +39,7 @@ Note: When you're done, submit a PR.
   * ERB allows ruby code to be run and evaluate within HTML.
   
 10. Why do I need a development AND test database?
+ * need different configs for each
   * Having a test database allows for a sandbox for testing. If you neeed to wipe this database and start over, that isnt a problem. By separating test and development, development is able to remain a closer version to production.
   
 11. What's responsive design?
