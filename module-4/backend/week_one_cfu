@@ -1,0 +1,42 @@
+## Week One - Module 4 Recap
+
+Fork this respository. Answer the questions to the best of your ability. Try to answer them with limited amount of external research. These questions cover the majority of what we've learned this week. 
+
+Note: When you're done, submit a PR. 
+
+1. What's the most useful thing you learned from completing the intermission week work?
++Mostly an exposure to JS syntax. Also, working through Sorting Suit was a nice re-familiariztion with algorithmic thinking. 
+
+2. What are some tools to help debug JavaScript code?
++Mocha & Chai
+
+3. What are some tools you need in order to unit test your JavaScript?
++Debugger, conlole.log(), PryJS
+
+4. What is the syntax for invoking a function?
++someFunction()
+
+5. What's the difference between `==` and `===` in JavaScript?
++`==` can be used to evaluate for truth when two items have different datatypes (ie 3 == "3"). `===` evalates based on exact truthyness. In this case, both values and datatypes need to be the exact same (ie "3" ==="3").
+
+6. What's the difference between asynchronous and synchronous JavaScript? 
++ Asynchronous JS continues to run and not wait for each operation to be completed. Once an operation is completed, the value is returned to the program and is handled accordingly. For asynchronous JS, I like to imagine a bull in a china shop.  Synchronous JS evaluates in the order that is designated by the developer. Each line of code will finish executing before moving on to the next.
+
+7. How do we setup a route when creating an API with Node and Express?
++ First we define an app. In our case, its been `app = Express()`. 
++Then, `app.get('path/pathname', function(request, resonse){})`
+
+8. What do we use Knex for?
++ We use Knex in the same we use Active Record, using it to communicate with our database as well as generate migrations and seed files.
+
+9. What's `npm` and what do we use it for?
++npm is the Node Package Manager and we use it for tracking and installing the dependencies needed for our applicaiton.
+
+#### Review  
+10. What's the MVC design pattern? Describe each part of MVC?
++MVC stands for Model-View-Controller. Models are used to model entities in a database and also contain calculations. Views display information to the user. Controllers are actions are defined to handle requests from the user. Based on the route and HTTP verb provided by the user, the controller requests information from models. Once the request has been executed, the controller sends the retrieved information to the appropriate View. The view formats and presents the information back to the user.
+11. What is AJAX? What are some benefits of using AJAX?
++A benefit of using AJAX is that it allows for a quering a database/making a request without having to reload a page. 
+
+12. What's a background worker? When would we want to use a background worker?
++A backgroung worker is an operation that is executed in the background in order to minimize page loads and wait times experienced by the user. A common application is in the use of mailers.
