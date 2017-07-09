@@ -1,0 +1,44 @@
+## Week Two - Module 4 Recap
+
+Fork this respository. Answer the questions to the best of your ability. Try to answer them with limited amount of external research. These questions cover the majority of what we've learned this week. 
+
+Note: When you're done, submit a PR. 
+
+1. What is Webpack and why is it useful?
+* Webpack is middleware that manages the asset pipeline. It does such things as convert scss to css, converts ES6/ES7 to ES5 for browser compatibility, and minifies whitespace. Its essential function is to package up an application in a way that can be interpreted by the browser. 
+
+2. When do you want to use event delegation?
+* You want to use event delegation to reduce the amount of event listeners on the page. For instance, placing an event delegator on a table, when configured correctly, will allow survalence of events that occur within the table. This is more convienent than placing a lister on every row of the table, especially if the table is very large.
+
+3. What's one difference between ES5 and ES6?
+* arrow functions (=>). Arrow functions replace the word function but it should be noted that when an arrow function is used, it binds the scope of the function. This makes it difficult to use in mocha/chai.
+
+4. How are you using the MVC design pattern in your Quantified Self project?
+* We have a routes folder that handles the requests from our client and directs the request to the proper controller funciton. The controller functions live in a seperate controller file for organization. When a controller function is invoked, it in turn invokes a model function which makes a request to our database. Model functions live in seperate files that mimick the general structure of our database ie. foods.js, meals.js mealFoods.js
+
+5. How do you execute raw SQL in node?
+* First the database must be required, and typically the connection is stored in a constant variable. Then the fuction .raw can be chained onto the variable. Within in the .raw, raw SQL can be written which we be executed within the database and then returned.
+
+6. What's a callback function and what are some reasons when we use/need callback functions?
+* A callback function is function that is passed to another function as a parameter. The callback function will then be executed within the other/wrapper function. We use callback functions to dry out our code and keep it more maintainable. Also we generally need them to get things working properly in asynch JS. 
+
+7. What is CORS?
+* CORS stands for Cross Origin Resource Sharing and is a mechanism that allows web servers cross domain access control. ie, It allows  application b ( our fronted ) to make an HTTP request to application a ( our backend ). 
+
+8. What are some steps to avoid CORS?
+* Run your backend and frontend from the same domain, as we did in rails. There seems to be some alternatives to CORS that may work depending the size of the data in the request and the size of data coming back. The few I found were iframes, XDM, and JSONP.
+
+#### Review  
+
+9. Why do people say "HTTP is stateless"?
+* HTTP is considered stateless because information is not persisted across requests. Each request made is fresh and has no memory of prior requests. The common work around is to use cookies to track requests made by a user.
+
+10. What is a RESTful API?
+* A RESTful API only has endpoints for GET ( all and individual database records), POST, PUT/PATCH and DELETE. To add more endpoints breaks the RESTful convention. 
+
+11. What are some main characteristics of a team following an agile workflow?
+* In an agile workflow a team will generally have; sprints ( a designated amount of time to finish given feature/s), daily standups and in some cases, daily retros but more commonly retros are held after a sprint, and a point system corresponding to the amount of time a feature will take.
+
+12. What are some advantages/disadvantages to using OAuth to authenticate a user?
+* Advantages: makes life easy for the developer. Authentication process is largely handled by the third party OAuth client
+  Disadvantages: a user must have an existing account with the third party OAuth client.
